@@ -1,0 +1,61 @@
+.noticeDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.noticeDetail__description {
+  color: var(--gray-08);
+}
+
+.noticeDetail__btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.noticeDetail__backBtn {
+  width: 100px;
+}
+
+.noticeDetail__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.noticeDetail__items {
+  display: flex;
+  align-items: center;
+  flex: 1 0 40%;
+  border-bottom: 2px solid var(--gray-04);
+}
+
+.noticeDetail__items h5,
+.attachedFile {
+  width: 100%;
+  padding: 8px 10px;
+}
+
+.noticeDetail__items h5:nth-child(1) {
+  background-color: var(--gray-03);
+  min-width: 32px;
+}
+
+.noticeTitle {
+  font-weight: 500;
+}
+
+.registrationDate,
+.writer,
+.views,
+.attachedFile {
+  color: var(--gray-09);
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 599px) {
+  .noticeDetail__items {
+    flex: 1 0 100%;
+  }
+}

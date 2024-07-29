@@ -1,0 +1,81 @@
+.approval-modalbox__form {
+  max-width: 500px;
+}
+
+.approval-modalbox__form h2 {
+  margin-top: 0;
+}
+
+.approval-modalbox__form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.approval-modalbox__form input[type="text"],
+.approval-modalbox__form select,
+.approval-modalbox__form textarea,
+.approval-modalbox__form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--gray-04);
+  border-radius: 4px;
+}
+#startDate {
+  width: 350px;
+}
+#endDate {
+  width: 350px;
+}
+#ampm {
+  width: 150px;
+}
+#deailtime {
+  width: 150px;
+}
+.approval-modalbox__form {
+  resize: none;
+}
+
+.approval-data__container {
+  display: flex;
+  align-items: center;
+}
+
+.modal-submit__btn {
+  background: var(--pri-normal, #40b883);
+  color: var(--gray-01, #fcfcfc);
+  padding: 15px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+.modal-submit__btn:hover {
+  background-color: var(--pri-dark, #39a374);
+  cursor: pointer;
+}
+
+.modal-box__form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid var(--gray-05);
+  border-radius: 4px;
+  height: 42px;
+}
+.no-data-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2em;
+  color: var(--gray-08);
+}
+@media screen and (max-width: 600px) {
+  .modal-box__form textarea {
+    width: 292px;
+  }
+}

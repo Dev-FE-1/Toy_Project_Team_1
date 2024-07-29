@@ -1,0 +1,168 @@
+.noticeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contents__newBtnWrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contents__newBtnWrap > button {
+  width: 100px;
+}
+
+.noticeContainer__filterWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* table style */
+.userNoticeTable > table {
+  width: 100%;
+  /* table-layout: fixed; */
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.userNoticeTable > table > thead > tr,
+.userNoticeTable > table > tbody > tr {
+  border-bottom: 1px solid var(--gray-05);
+}
+
+.userNoticeTable > table > tbody > tr:hover {
+  background-color: var(--gray-02);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.userNoticeTable > table > thead > tr > th,
+.userNoticeTable > table > tbody > tr > td {
+  text-align: left;
+  padding: 12px 8px;
+}
+
+.userNoticeTable > table > thead > tr > th:first-child,
+.userNoticeTable > table > tbody > tr > td:first-child {
+  width: 10%;
+}
+
+.userNoticeTable > table > thead > tr > th:nth-child(2),
+.userNoticeTable > table > tbody > tr > td:nth-child(2) {
+  width: 35%;
+}
+
+.userNoticeTable > table > thead > tr > th:nth-child(3),
+.userNoticeTable > table > tbody > tr > td:nth-child(3) {
+  width: 15%;
+}
+
+.userNoticeTable > table > thead > tr > th:nth-child(4),
+.userNoticeTable > table > tbody > tr > td:nth-child(4) {
+  width: 15%;
+}
+
+.userNoticeTable > table > thead > tr > th:nth-child(5),
+.userNoticeTable > table > tbody > tr > td:nth-child(5) {
+  width: 15%;
+}
+
+.userNoticeTable > table > thead > tr > th:nth-child(6),
+.userNoticeTable > table > tbody > tr > td:nth-child(6) {
+  width: 10%;
+}
+
+.userNoticeTable > table > thead > tr > th:nth-child(7),
+.userNoticeTable > table > tbody > tr > td:nth-child(7) {
+  display: none;
+}
+
+.noticeResponsive {
+  display: flex;
+  width: 100%;
+}
+
+.importantTag {
+  padding: 4px 6px;
+  border-radius: 50px;
+  color: var(--color-white);
+  background: var(--color-pri-normal);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* tab style */
+.notices__tabs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.notices__tab {
+  flex: 1 0 30%;
+  border-radius: 0px;
+  border: 1px solid var(--gray-05);
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  padding: 8px;
+}
+
+.notices__tab:hover {
+  background-color: var(--color-pri-dark);
+  color: var(--color-white);
+}
+
+.active {
+  background-color: var(--color-pri-normal);
+  color: var(--color-white);
+}
+
+/* 반응형 */
+/* 타블렛 */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .notices__tab {
+    flex: 1 0 40%;
+  }
+}
+/* 모바일 */
+@media (max-width: 599px) {
+  .notices__tab {
+    flex: 1 0 40%;
+  }
+  .noticeContainer__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .noticeContainer__filterWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .userNoticeTable > table > thead {
+    display: none;
+  }
+  .userNoticeTable > table > tbody > tr > td {
+    width: 100%;
+  }
+  .userNoticeTable > table > tbody > tr > td:nth-child(1),
+  .userNoticeTable > table > tbody > tr > td:nth-child(2),
+  .userNoticeTable > table > tbody > tr > td:nth-child(3),
+  .userNoticeTable > table > tbody > tr > td:nth-child(4),
+  .userNoticeTable > table > tbody > tr > td:nth-child(5),
+  .userNoticeTable > table > tbody > tr > td:nth-child(6) {
+    display: none;
+  }
+  .userNoticeTable > table > tbody > tr > td:nth-child(7) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    border-top: 1px solid var(--gray-04);
+  }
+  .noticeResponsive__attachment {
+    display: flex;
+  }
+}

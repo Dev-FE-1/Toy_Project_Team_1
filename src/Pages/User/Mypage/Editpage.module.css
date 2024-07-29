@@ -1,0 +1,222 @@
+.page {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page__title {
+  margin-bottom: 12px;
+}
+
+.page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  margin-bottom: 12px;
+  padding: 16px;
+}
+
+.page__body {
+  display: flex;
+  padding: 0 0 16px 0;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 16px;
+}
+.body__img {
+  display: flex;
+  padding-bottom: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  align-self: stretch;
+  border-bottom: 1px solid var(--gray-05);
+}
+
+.profileimg {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+#background {
+  width: 200px;
+  height: 200px;
+}
+.profileImg {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.imgbtn {
+  /* margin-top: 20px;
+  display: flex; */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.user__info label {
+  text-align: left;
+}
+
+.user__info li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.user__info li select {
+  width: 354px;
+  box-sizing: border-box;
+}
+
+.user__info li input {
+  width: 354px;
+  box-sizing: border-box;
+}
+.user__info span {
+  box-sizing: border-box;
+  display: flex;
+  width: 190px;
+  padding: 16px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.pageFooter img {
+  width: 24px;
+  height: 24px;
+}
+
+.toastMessage {
+  visibility: hidden;
+  background-color: rgba(20, 225, 136, 0.2);
+  color: var(--color-pri-dark);
+  border-radius: 4px;
+  display: flex;
+  width: 250px;
+  padding: 6px 16px;
+  align-items: flex-start;
+  position: absolute;
+  right: 31px;
+  bottom: 24px;
+  box-sizing: border-box;
+  gap: 5px;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* opacity와 visibility가 부드럽게 변하도록 추가 */
+  opacity: 0;
+}
+
+.toastText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+  margin-left: 5px;
+}
+
+.active {
+  visibility: visible;
+  right: 31px;
+  bottom: 24px;
+  opacity: 1;
+  z-index: 999;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer__image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.info__fileInput {
+  display: none;
+}
+
+.imgBtnContainer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__fileLabel {
+  border-radius: 4px;
+  padding: 6px 14px;
+  background-color: transparent;
+  border: 1px solid var(--gray-08);
+  color: var(--gray-08);
+  font-size: 1.4rem;
+}
+
+.info__fileLabel:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background: var(--gray-09);
+  color: var(--color-white);
+}
+
+.uploadProfile {
+  display: none;
+}
+
+/* 모바일 */
+@media (max-width: 599px) {
+  .page {
+    padding: 8px 12px;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .user__info li {
+    width: 100%;
+  }
+
+  .user__info span {
+    width: 130px;
+  }
+
+  li input {
+    width: 100%;
+  }
+}
+
+/* 타블렛 */
+@media (min-width: 600px) and (max-width: 1023px) {
+  /* .page__footer .toast__message {
+    bottom: auto;
+    margin-top: 10px;
+  } */
+}
+
+/* 데스크탑 */
+@media (min-width: 1024px) {
+}

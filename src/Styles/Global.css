@@ -1,0 +1,288 @@
+/* 프로젝트 전체에서 사용 가능한 전역 스타일 */
+/* 참고!
+일반 입력창은 input 태그 사용, 써야 할 내용이 많을 때 (ex. 200자 이상 등)의 경우에만 textarea 태그 사용
+ */
+
+/* input style */
+/* data-shape은 모양을 지칭, input 모양 2개 ( line, underline ) */
+/* 사용예시
+<input data-shape="line" type="search" placeholder="내용 또는 제목을 입력해주세요."/>
+<input data-shape="underline" type="search" placeholder="내용 또는 제목을 입력해주세요."/> */
+/* width를 변경하고싶을때 style tag 안에 직접 명시
+예시: <input style="width: 100px;" data-shape="line" type="search" placeholder="내용 또는 제목을 입력해주세요."/> */
+input {
+  width: 300px;
+  padding: 8px 12px;
+  color: var(--gray-06);
+}
+
+input[data-shape="line"] {
+  border: 1.5px solid var(--gray-05);
+  border-radius: 4px;
+  background: transparent;
+}
+
+input[data-shape="underline"] {
+  border: none;
+  border-bottom: 1.5px solid var(--gray-05);
+  border-radius: 0;
+  background: transparent;
+}
+
+input[data-shape="transparent"] {
+  border: none;
+  background: transparent;
+}
+
+/* select style */
+/* select는 모양이 하나라 class명 또는 스타일 넣을 필요없이 사용 */
+/* width를 변경하고싶을때 style tag 안에 직접 명시 */
+/* 에시: <select style="width: 100px;" name="filter" id="filter"></select> */
+select {
+  width: 120px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--gray-05);
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* textarea style */
+/* data-shape은 모양을 지칭, textarea 모양 2개 ( line, underline, transparent ) */
+/* 사용예시
+  <textarea data-shape='line' placeholder="내용을 입력해주세요." ></textarea>
+  <textarea data-shape='underline' placeholder="내용을 입력해주세요." ></textarea>
+  <textarea data-shape='transparent' placeholder="내용을 입력해주세요." ></textarea> */
+textarea {
+  resize: none;
+}
+
+textarea[data-shape="line"] {
+  border: 1.5px solid var(--gray-05);
+  border-radius: 4px;
+  background: transparent;
+}
+
+textarea[data-shape="underline"] {
+  border-bottom: 1.5px solid var(--gray-05);
+  background: transparent;
+}
+
+textarea[data-shape="transparent"] {
+  border: none;
+  background: transparent;
+}
+
+textarea:focus {
+  border-color: var(--color-pri-normal);
+  outline: none;
+}
+
+/* button style */
+/* data-color: 버튼 컬러 (종류:positive-그린,warning—레드,neutral-블랙), data-shape은 모양으로 block,line이 있음 */
+/* 사용예시
+  1. 긍정적버튼일 경우
+  <button data-color='positive' data-shape='block'>수락</button>
+  <button data-color='positive' data-shape='line'>수락</button>
+  2. 경고버튼일 경우
+  <button data-color='warning' data-shape='block'>거절</button>
+  <button data-color='warning' data-shape='line'>거절</button>
+  3. 뉴트럴버튼일 경우
+  <button data-color='neutral' data-shape='block'>뒤로가기</button>
+  <button data-color='neutral' data-shape='line'>뒤로가기</button> */
+
+button {
+  border-radius: 4px;
+  padding: 6px 14px;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* positive button */
+button[data-color="positive"][data-shape="block"] {
+  background-color: var(--color-pri-normal);
+  border: 1px solid var(--color-pri-normal);
+  color: var(--color-white);
+}
+
+button[data-color="positive"][data-shape="block"]:hover {
+  background: var(--color-pri-dark);
+}
+
+button[data-color="positive"][data-shape="line"] {
+  background-color: transparent;
+  border: 1px solid var(--color-pri-normal);
+  color: var(--color-pri-normal);
+}
+
+button[data-color="positive"][data-shape="line"]:hover {
+  background: var(--color-pri-dark);
+  color: var(--color-white);
+}
+
+/* error button */
+button[data-color="warning"][data-shape="block"] {
+  background-color: var(--color-tar-normal);
+  border: 1px solid var(--color-tar-normal);
+  color: var(--color-white);
+}
+
+button[data-color="warning"][data-shape="block"]:hover {
+  background: var(--color-tar-dark);
+}
+
+button[data-color="warning"][data-shape="line"] {
+  background-color: transparent;
+  border: 1px solid var(--color-tar-normal);
+  color: var(--color-tar-normal);
+}
+
+button[data-color="warning"][data-shape="line"]:hover {
+  background: var(--color-tar-dark);
+  color: var(--color-white);
+}
+
+/* neutral button: 화면의 변화가 없는 버튼, 화면으로 되돌아가는 버튼 (예를 들면 "뒤로가기"버튼을 말합니다.) */
+button[data-color="neutral"][data-shape="block"] {
+  background-color: var(--gray-08);
+  border: 1px solid var(--gray-08);
+  color: var(--color-white);
+}
+
+button[data-color="neutral"][data-shape="block"]:hover {
+  background: var(--gray-09);
+}
+
+button[data-color="neutral"][data-shape="line"] {
+  background-color: transparent;
+  border: 1px solid var(--gray-08);
+  color: var(--gray-08);
+}
+
+button[data-color="neutral"][data-shape="line"]:hover {
+  background: var(--gray-09);
+  color: var(--color-white);
+}
+
+/* secondary button: 관리자 페이지 메인컬러 버튼 */
+button[data-color="secondary"][data-shape="block"] {
+  background-color: var(--color-sec-light);
+  border: 1px solid var(--color-sec-light);
+  color: var(--color-white);
+}
+
+button[data-color="secondary"][data-shape="block"]:hover {
+  background: var(--color-sec-normal);
+}
+
+button[data-color="secondary"][data-shape="line"] {
+  background-color: transparent;
+  border: 1px solid var(--color-sec-light);
+  color: var(--color-sec-light);
+}
+
+button[data-color="secondary"][data-shape="line"]:hover {
+  background: var(--color-sec-normal);
+  color: var(--color-white);
+}
+
+/* modal style */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modal__background {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__header > img:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: invert(69%) sepia(12%) saturate(193%) hue-rotate(193deg)
+    brightness(92%) contrast(89%);
+}
+
+.modal__content {
+  width: 444px;
+  text-align: center;
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  top: 0;
+  padding: 16px;
+}
+
+.modalHidden {
+  display: none;
+}
+
+/* 추가!!!!!! */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 반응형 네비게이션 헤더 */
+#responsive-nav {
+  display: none;
+  width: 100%;
+  height: 44px;
+}
+
+/* 총 컨테이너 */
+#container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 100%;
+}
+
+#contents {
+  /* box-sizing: border-box; */
+  flex: 1;
+  overflow: hidden;
+  padding: 16px 24px;
+  /* overflow: auto; */
+}
+
+@media screen and (max-width: 600px) {
+  #responsive-nav {
+    display: flex;
+    z-index: 3;
+  }
+
+  #contents {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,125 @@
+.h5 {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-weight: 500;
+}
+
+.mileage-contents {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h6 {
+  color: var(--gray-06);
+}
+
+.mileage-list {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 10px;
+  gap: 8px;
+  overflow: auto;
+}
+
+.mileage-list__item {
+  width: calc(25% - 9px);
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* 상대 위치 설정 */
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.mileage-list__item:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* 검은 색 필터를 위한 가상 요소 */
+.mileage-list__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mileage-list__title {
+  color: var(--color-white);
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > div {
+  width: 100%;
+  text-align: left;
+}
+
+form > div > input {
+  display: flex;
+  padding: var(--none, 0px) 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* 테블릿 버전 */
+@media screen and (max-width: 900px) {
+  .mileage-list__item {
+    width: calc(33.33% - 6px);
+  }
+
+  .mileage-list__title {
+    bottom: 12px;
+    left: 12px;
+  }
+}
+
+.mileage-list {
+  padding: 0;
+}
+
+/* 모바일 버전 */
+@media screen and (max-width: 600px) {
+  .mileage-list__item {
+    width: calc(33.33% - 6px);
+  }
+
+  .mileage-list__title h3 {
+    /* h3->h4 */
+    font-size: 1.6rem;
+  }
+
+  .mileage-list__title h5 {
+    /* h5->h6 */
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,65 @@
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btnWrap {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info__items {
+  flex: 1 0 40%;
+  display: flex;
+  border-radius: 0px;
+  border: 1px solid var(--gray-05);
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+select[data-n-select] {
+  border: 0;
+  width: 100%;
+}
+
+.info__items > h5 {
+  background-color: var(--gray-03);
+  width: 100px;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+/* 새공지등록 */
+.uploadButton {
+  display: none;
+}
+
+button[data-n-remove-file] {
+  display: flex;
+  border: 0;
+  background: 0;
+}
+
+button[data-n-remove-file]:hover {
+  color: var(--color-tar-normal);
+}
+
+button[data-n-remove-file] > img {
+  width: 16px;
+  height: 16px;
+}
+
+[data-n-file-info] {
+  display: none;
+}

@@ -1,0 +1,25 @@
+#modal-dashboard_1 > .modal-box__container,
+#modal-dashboard_2 > .modal-box__container {
+  min-width: 360px;
+}
+
+.checkTimeModal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.checkTimeModal > span {
+  font-size: 6.4rem;
+  font-weight: 600;
+}
+
+.checkTimeModal > h3 {
+  padding-bottom: 16px;
+  color: var(--gray-08);
+}
+
+.checkTimeModal > button {
+  width: 100%;
+}

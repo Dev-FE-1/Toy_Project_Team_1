@@ -1,0 +1,185 @@
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.content__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--1, 8px);
+  align-items: center;
+  align-self: stretch;
+}
+.content__selectboxrow {
+  display: flex;
+  flex-direction: row;
+  gap: var(--1, 8px);
+  align-items: center;
+  align-self: stretch;
+}
+.paymentRequest {
+  margin-left: outo;
+  display: flex;
+  border: none;
+  padding: 6px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  border-radius: var(--borderRadius, 4px);
+  background: var(--pri-normal, #40b883);
+  color: var(--gray-01, #fcfcfc);
+}
+.paymentRequest:hover {
+  background-color: var(--pri-dark, #39a374);
+  cursor: pointer;
+}
+
+.approval-approve__tabs {
+  display: flex;
+  position: relative;
+}
+
+.approval-approve__tab {
+  font-size: 1.4rem;
+  letter-spacing: 0.4px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: var(--color-white);
+  display: flex;
+  border-radius: 0;
+  border: none;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.approval-approve__tab.active {
+  color: var(--color-pri-normal);
+}
+
+.approval-approve__tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33.33%; /* 탭의 개수에 따라 조정 */
+  height: 2px;
+  background-color: var(--color-pri-normal);
+  transition: transform 0.3s ease;
+}
+
+.approval-approve__tabs.active-undetermined::after {
+  transform: translateX(0);
+}
+
+.approval-approve__tabs.active-approved::after {
+  transform: translateX(100%);
+}
+
+.approval-approve__tabs.active-rejected::after {
+  transform: translateX(200%);
+}
+
+.approval-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  align-self: stretch;
+  cursor: pointer;
+  width: 100%;
+}
+.approval-table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.approval-table tbody {
+  width: 100%;
+}
+
+.approval-table__thead {
+  display: flex;
+  height: 38px;
+  padding: var(--none, 0px) 12px;
+  align-items: center;
+  align-self: stretch;
+  text-align: left;
+
+  border-radius: 6px;
+  background: var(--pri-normal, #40b883);
+  color: var(--gray-01, #fcfcfc);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+}
+.approval-table tr {
+  display: flex;
+  width: 100%;
+}
+.approval-table th:first-child {
+  width: 20%;
+}
+.approval-table th:nth-child(2) {
+  width: 55%;
+}
+.approval-table th:last-child {
+  width: 25%;
+}
+.approval-list__row {
+  display: flex;
+  font-size: 1.2rem;
+  height: 38px;
+  padding: 0px 12px;
+  align-items: center;
+  text-align: left;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+}
+.approval-list__row td {
+  padding: 12px;
+}
+
+.approval-list__table,
+.approval-list__tbody {
+  width: 100%;
+}
+
+.approval-list__category {
+  width: 15%;
+}
+.approval-list__title {
+  width: 60%;
+}
+
+.approval-list__submitdate {
+  width: 25%;
+}
+.approval-list__meida {
+  display: none;
+}
+.approval-tr__date {
+  color: var(--gray-06, #9fa1ab);
+}
+/* 미디어 쿼리 */
+@media (max-width: 600px) {
+  .approval-list__submitdate,
+  .approval-list__title,
+  .approval-table th:last-child {
+    display: none;
+  }
+  .approval-list__meida {
+    display: block;
+    width: 100%;
+  }
+  .approval-list__row {
+    height: 70px;
+  }
+}

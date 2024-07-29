@@ -1,0 +1,379 @@
+.mileage-contents {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mileage-score {
+  height: 56px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.mileage-score__left {
+  display: flex;
+  align-items: center;
+}
+
+.mileage-icon {
+  padding: 14px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.mileage-score__right {
+  color: var(--gray-06);
+  fill: var(--gray-06);
+  display: flex;
+  align-items: center;
+}
+
+.mileage-score__right:hover {
+  cursor: pointer;
+}
+
+.mileage-score__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.mileage-score__message {
+  color: var(--gray-06);
+}
+
+/* 마일리지 심사 현황 및 신청 */
+.mileage-approve {
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mileage-approve__tabs {
+  display: flex;
+}
+
+.mileage-approve__tab {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  /********* 색 추가 *************/
+  color: rgba(0, 0, 0, 0.6);
+  background-color: var(--color-white);
+  display: flex;
+  border-radius: 0;
+  border: none;
+}
+
+.mileage-approve__save-list {
+  font-size: 14px;
+}
+
+.mileage-approve__request {
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.mileage__filter {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mileage__filter > select {
+  width: 156px;
+  /* 운영체제 및 브라우저에 기본적으로 설정되어 있는 테마를 기반으로 요소를 표현할 때 사용
+    네이티브로 지원되는 모양을 해제하거나 추가할 때 사용 */
+  /* 표준 appearance 속성 */
+  appearance: none;
+  /* Safari 및 Chrome */
+  -webkit-appearance: none;
+  /* Firefox */
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-width="2" d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.mileage__filter > h6 {
+  color: var(--gray-06);
+}
+
+.mileage-list {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 10px;
+  gap: 12px;
+  overflow: auto;
+}
+
+.mileage-list__item {
+  width: calc(25% - 9px);
+  /* height를 width와 동일하게 설정 */
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  /* 상대 위치 설정 */
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.mileage-list__item:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* 검은 색 필터를 위한 가상 요소 */
+.mileage-list__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mileage-list__title {
+  color: var(--color-white);
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1;
+}
+
+/* 마일리지 기준 모달 */
+#modal-1 > .modal-box__content {
+  width: 280px;
+}
+
+#modal-1 > .modal-box__content > .mileage__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px 16px;
+}
+
+.mileage-standard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mileage-standard__icon {
+  padding: 14px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+#seed {
+  fill: var(--color-yellow-normal);
+  background: #ead6271a;
+}
+
+#sprout {
+  fill: var(--color-orange-dark);
+  background: #f576001a;
+}
+
+#leaf {
+  fill: var(--color-purple-normal);
+  background: #9261e11a;
+}
+
+#tree {
+  fill: var(--color-pri-normal);
+  background: #40b8831a;
+}
+
+.h5 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  color: var(--gray-08);
+}
+
+.mileage-standard__description {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 마일리지 신청 모달 */
+.modal-box__content > form {
+  padding: 0 16px 16px;
+}
+
+.modal-box__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-box__form h5 {
+  color: var(--gray-08);
+}
+
+.modal-box__form select {
+  width: 100%;
+  height: 42px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-width="2" d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.modal-box__form input {
+  color: var(--color-black);
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+}
+
+.modal-box__button {
+  padding: 8px 22px;
+  margin-top: 12px;
+}
+
+/* 탭 애니메이션 */
+.mileage-approve__tabs {
+  display: flex;
+  position: relative;
+}
+
+.mileage-approve__tab {
+  font-size: 1.4rem;
+  letter-spacing: 0.4px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: var(--color-white);
+  display: flex;
+  border-radius: 0;
+  border: none;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.mileage-approve__tab.active {
+  color: var(--color-pri-normal);
+}
+
+.mileage-approve__tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33.33%; /* 탭의 개수에 따라 조정 */
+  height: 2px;
+  background-color: var(--color-pri-normal);
+  transition: transform 0.3s ease;
+}
+
+.mileage-approve__tabs.active-undetermined::after {
+  transform: translateX(0);
+}
+
+.mileage-approve__tabs.active-approved::after {
+  transform: translateX(100%);
+}
+
+.mileage-approve__tabs.active-rejected::after {
+  transform: translateX(200%);
+}
+
+/* 테블릿 버전 */
+@media screen and (max-width: 1024px) {
+  .mileage-list__item {
+    width: calc(33.33% - 6px);
+  }
+}
+
+.mileage-list {
+  padding: 0;
+  gap: 8px;
+}
+
+/* 모바일 버전 */
+@media screen and (max-width: 600px) {
+  .mileage-list {
+    margin-bottom: 80px;
+  }
+
+  .mileage-list__item {
+    width: calc(50% - 8px);
+  }
+
+  .mileage-list__title {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .mileage-list__title h3 {
+    /* h3->h4 */
+    font-size: 1.4rem;
+  }
+
+  .mileage-list__title h5 {
+    /* h5->h6 */
+    font-size: 1.2rem;
+  }
+
+  .mileage-score {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    height: 75px;
+  }
+
+  .mileage-score__left {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .mileage-icon {
+    padding: 8px;
+  }
+
+  .mileage-approve {
+    height: 80px;
+    margin-top: 5px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .mileage-approve__btns {
+    align-self: flex-end;
+    width: 100%;
+    display: flex;
+  }
+
+  .mileage-approve__btns > button {
+    flex: 1 0 0;
+  }
+}

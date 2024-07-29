@@ -1,0 +1,422 @@
+/* 대시보드 영역 */
+
+.userDashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.userDashboard__attendance {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+}
+
+.card {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.dashboardCon {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.userDashboard__profileCard {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: row;
+  padding: 8px;
+  gap: 24px;
+}
+
+.profileImg {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100px;
+}
+
+.profileImg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.infoFirst {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoFirst__name {
+  margin-right: 10px;
+}
+
+.infoSecond {
+  color: var(--gray-08);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  gap: 5px;
+}
+
+.infoSecond .email {
+  margin-right: 24px;
+}
+
+.emailInfo,
+.callInfo {
+  display: flex;
+  gap: 5px;
+}
+
+/* 전자결제 영역 */
+
+.userDashboard__approvalFilter {
+  padding: 12px 0px;
+}
+
+.userDashboard__approvalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userDashboard__approvalTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userDashboard__approvalTitle > h4 {
+  color: var(--gray-06);
+}
+
+.approvalTable {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+}
+
+.approvalTable__tbody {
+  color: var(--gray-09);
+}
+
+.approvalTable > thead > tr > th {
+  color: var(--gray-01);
+  background-color: var(--color-pri-light);
+}
+
+.approvalTable > thead > tr > th,
+.approvalTable > tbody > tr > td {
+  text-align: left;
+  padding: 12px 8px;
+}
+
+.approvalTable > tbody > tr {
+  border-bottom: 1px solid var(--gray-04);
+}
+
+.approvalTable > thead > tr > th:first-child,
+.approvalTable > tbody > tr > td:first-child {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  width: 20%;
+}
+
+.approvalTable > thead > tr > th:nth-child(2),
+.approvalTable > tbody > tr > td:nth-child(2) {
+  width: 50%;
+}
+
+.approvalTable > thead > tr > th:nth-child(3),
+.approvalTable > tbody > tr > td:nth-child(3) {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  width: 30%;
+}
+
+.approvalTable > thead > tr > th:nth-child(4),
+.approvalTable > tbody > tr > td:nth-child(4) {
+  display: none;
+}
+.no-data-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--gray-08);
+}
+.userDashboard__approval-title--right {
+  display: flex;
+  align-items: center;
+}
+.userDashboard__approval-title--right a,
+.userDashboard__approval-title--right a svg {
+  color: var(--gray-06);
+  text-decoration: none;
+  align-items: center;
+}
+/* 공지사항 영역 */
+.userDashboard__notice {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.userDashboard__noticeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userDashboard__noticeTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userDashboard__noticeTitle > h4 {
+  color: var(--gray-06);
+}
+
+.noticeTable {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+}
+
+.userDashboard__noticeRight {
+  display: flex;
+  align-items: center;
+}
+
+.userDashboard__noticeRight > a {
+  color: var(--gray-06);
+  text-decoration: none;
+}
+
+.noticeTable > thead > tr,
+.noticeTable > tbody > tr {
+  border-bottom: 1px solid var(--gray-04);
+}
+
+.noticeTable__tbody {
+  color: var(--gray-08);
+}
+
+.noticeTable > thead > tr > th,
+.noticeTable > tbody > tr > td {
+  text-align: left;
+  padding: 12px 8px;
+}
+
+.noticeTable > thead > tr > th:first-child,
+.noticeTable > tbody > tr > td:first-child {
+  width: 10%;
+}
+
+.noticeTable > thead > tr > th:nth-child(2),
+.noticeTable > tbody > tr > td:nth-child(2) {
+  width: 35%;
+}
+
+.noticeTable > thead > tr > th:nth-child(3),
+.noticeTable > tbody > tr > td:nth-child(3) {
+  width: 15%;
+}
+
+.noticeTable > thead > tr > th:nth-child(4),
+.noticeTable > tbody > tr > td:nth-child(4) {
+  width: 15%;
+}
+
+.noticeTable > thead > tr > th:nth-child(5),
+.noticeTable > tbody > tr > td:nth-child(5) {
+  width: 15%;
+}
+
+.noticeTable > thead > tr > th:nth-child(6),
+.noticeTable > tbody > tr > td:nth-child(6) {
+  width: 10%;
+}
+
+.noticeTable > thead > tr > th:nth-child(7),
+.noticeTable > tbody > tr > td:nth-child(7) {
+  display: none;
+}
+
+.noticeResponsive {
+  display: flex;
+  width: 100%;
+}
+
+.dashboard__attachments {
+  display: flex;
+}
+
+/* 오늘의 출근 영역 */
+.userDashboard__todayAttendance {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.userDashboard__todayAttendanceWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.userDashboard__stamp {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.userDashboard__stamp > button {
+  width: 50%;
+  text-align: center;
+  background: 0;
+}
+
+.userDashboard__stamp > button:hover {
+  border: 2px solid var(--color-pri-normal);
+  transition: 0.3s;
+  cursor: pointer;
+  background: var(--gray-01);
+}
+
+.userDashboard__stamp > button > h3 {
+  color: var(--gray-07);
+}
+
+.userDashboard__today {
+  color: var(--gray-07);
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 4.5rem;
+}
+
+.userDashboard__state {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userDashboard__attendanceHistory {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.userDashboard__attendanceTime {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDashboard__todayTag {
+  padding: 4px 8px;
+  border-radius: 50px;
+  color: var(--color-white);
+  background: var(--color-sec-normal);
+}
+
+.recordStartTimeBtn,
+.recordEndTimeBtn {
+  border-radius: 12px;
+  padding: 12px;
+  border: 2px solid var(--gray-05);
+}
+
+.userDashboard__currentTime {
+  font-size: 6.4rem;
+  font-weight: 600;
+}
+
+/* 반응형 */
+/* 모바일 */
+@media (max-width: 599px) {
+  .userDashboard__attendance {
+    flex-direction: column;
+    width: calc(100% - 32px);
+  }
+
+  .userDashboard__attendanceTime {
+    margin: 24px 0;
+  }
+
+  .userDashboard__attendanceHistory,
+  .userDashboard__todayAttendance {
+    width: 100%;
+  }
+
+  .approvalTable > thead > tr > th:nth-child(2),
+  .approvalTable > tbody > tr > td:nth-child(2),
+  .approvalTable > thead > tr > th:nth-child(3),
+  .approvalTable > tbody > tr > td:nth-child(3) {
+    display: none;
+  }
+
+  .approvalTable > thead > tr > th:nth-child(4),
+  .approvalTable > tbody > tr > td:nth-child(4) {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 100%;
+    display: block;
+  }
+
+  .infoSecond {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoSecond > .emailInfo,
+  .infoSecond > .callInfo {
+    display: flex;
+    gap: 5px;
+  }
+  .userDashboard__notice {
+    margin-bottom: 80px;
+  }
+  .noticeTable > thead {
+    display: none;
+  }
+  .noticeTable > tbody > tr > td:nth-child(1),
+  .noticeTable > tbody > tr > td:nth-child(2),
+  .noticeTable > tbody > tr > td:nth-child(3),
+  .noticeTable > tbody > tr > td:nth-child(4),
+  .noticeTable > tbody > tr > td:nth-child(5),
+  .noticeTable > tbody > tr > td:nth-child(6) {
+    display: none;
+  }
+  .noticeTable > tbody > tr > td:nth-child(7) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    border-top: 1px solid var(--gray-04);
+  }
+}
+
+/* 타블렛 */
+@media (min-width: 600px) and (max-width: 1023px) {
+}

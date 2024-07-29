@@ -1,0 +1,23 @@
+.responsive-nav__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--gray-04);
+}
+.logo {
+  width: 188px;
+  height: 32px;
+  padding: 6px 16px;
+}
+
+.logo > img {
+  height: 90%;
+}
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--gray-08);
+  font-size: 24px;
+  cursor: pointer;
+}
